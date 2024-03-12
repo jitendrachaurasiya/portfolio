@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.jpg" class="logo"> 
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p><b>Web Developer</b></p>
+                <h2> Hi, I'm <span>Jitendra Kumar</span> </h2>
+            </div>
+        </div>
+    </div>
+   <! -------------About-------------------!>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/1.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ab beatae illo, 
+                        hic, porro eos aut earum reprehenderit in voluptatem exercitationem ducimus commodi
+                         tempore blanditiis, perspiciatis odit est eum reiciendis!
+                    </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Java (Basic)</span></li>
+                            <li><span>Html, Css, JavaScript (Basic) </span></li>
+                            <li><span>Python</span></li>
+                            
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span> Intership | Analyse Infotech</span><br>Web Development | Technologies-Python with Django Framework </li>
+                            <li><span>Inter | CodSoft</span><br> Web Development </li>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2024</span><br>BCA | Shri Ramswaroop Memorial College
+                            of Management, Tiwariganj Lucknow 226028</li>
+                            <li><span>2021</span><br>XII | St. Chandra Prabha Memorial Academy,
+                            Pachwas Basti 272127</li>
+                            <li><span>2019</span><br>X | St. Chandra Prabha Memorial Academy,
+                                Pachwas Basti 272127</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---------------contact info--------------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p class="contact-me"><i class="fa-regular fa-envelope"></i><b>chaurasiyajitendra35@gmail.com</b></p>
+                    <p class="contact-me"> <i class="fa-solid fa-phone-square"></i><b>9336047965</b></p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=100053900505100&mibextid=ZbWKwL"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://x.com/Jitendr33538214?t=PWdq95H6bCPJp_Wj3yLSKw&s=09"><i class="fa-brands fa-twitter-square"></i></a>
+                        <a href="https://www.instagram.com/jitendra__88/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/jitendra-kumar-32692a223?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="images/Jitendra Resumes.pdf" download class="btn">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn">Submit</button>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright, Made <i class="fa-solid fa-heart"></i> by Jitendra</p>
+        </div>
+    </div>
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
+
+    <script>
+
+        var sidemenu = document.getElementById("sidemenu");
+         
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+
+</body>
+
+
+</html>
